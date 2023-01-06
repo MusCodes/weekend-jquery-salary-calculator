@@ -1,0 +1,49 @@
+table {
+    border: 3px solid black;
+    padding-right: 8%;
+    border-collapse: collapse;
+    width: 100%;
+
+}
+td,th{
+    padding: 8px;
+    text-align: left;
+    border: 1px solid salmon;
+}
+
+h1{
+    text-align: center;
+    color: red;
+}
+ #firstName {
+    border: 1px solid purple;
+    padding: 3px;
+}
+#lastName {
+    border:1px solid purple;
+    padding: 3px;
+}
+#Id {
+    border:1px solid purple;
+    padding: 3px;
+}
+
+
+#Title{
+    border: 1px solid purple;
+    padding: 3px;
+}
+
+#Salary {
+    border:1px solid purple;
+    padding:3px;
+}
+
+
+
+
+
+
+
+
+  
