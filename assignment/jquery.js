@@ -1,63 +1,58 @@
-console.log('im working');
-$(function(){
-    //we set up our click function, were telling jquery to refrence our submit
-    // id which is a submit button, and every time that is clicked, to run out function.
+console.log("im working");
+$(function () {
+  //we set up our click function, were telling jquery to refrence our submit
+  // id which is a submit button, and every time that is clicked, to run out function.
 
-  $('#submit').on('click',function (){
-    let grabberObject = grabber()
-    console.log(grabberObject)
+  $("#submit").on("click", function () {
+    let grabberObject = grabber();
+    console.log(grabberObject);
 
     table(grabberObject);
-    let sumTotal= 0;
+    let sumTotal = 0;
 
-    $(".salary").each(function(){
-        let salary = $(this).text()
-        sumTotal += Number(salary);
-        
-        
-        
+    $(".salary").each(function () {
+      let salary = $(this).text();
+      sumTotal += Number(salary / 12);
+    });
+    let formatter = new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: "USD",
     });
     $("#spaniD").html(sumTotal);
     console.log(sumTotal);
-    if (sumTotal>20000){
-        $(".total").addClass('color')
+    if (sumTotal > 20000) {
+      $(".total").addClass("color");
     }
-    $(".delete").click(function(){
-     $(this).closest ("tr").remove();
-        
-        
+    $(".delete").click(function () {
+      $(this).closest("tr").remove();
+    });
+    $("#spaniD").text(formatter.format(sumTotal));
+  });
 
-    })
-    
+  //table(grabber());
 });
+// creating a function that grabs the input we enter
+//
 
-//table(grabber());
-});
-// creating a function that grabs the input we enter 
-// 
+function grabber() {
+  const grabobj = {
+    firstName: $("#firstName").val(),
+    lastName: $("#lastName").val(),
+    id: $("#id").val(),
+    title: $("#title").val(),
+    salary: $("#salary").val(),
+  };
 
-
-function grabber(){
-    const grabobj = {
-        firstName: $('#firstName').val(),
-        lastName: $('#lastName').val(),
-        id: $('#id').val(),
-        title: $('#title').val(),
-        salary: $('#salary').val(),
-        
-    };
-    
-    return grabobj;}
+  return grabobj;
+}
 
 // console.log(grabobj);}
-
 
 //created a function where we passed the grabber function
 // we created earlier as a argument and takes the input we enter inside the grabber function
 // and appends it as a table.
-function table (ob){
-    
-    $("#tableiD").append(`<tr>
+function table(ob) {
+  $("#tableiD").append(`<tr>
         <td>${ob.firstName}</td>
         <td>${ob.lastName}</td>
         <td>${ob.id} </td>
@@ -67,15 +62,5 @@ function table (ob){
         <td class="delete"> <button> Delete</button></td>
     
     </tr>`);
-    console.log(ob.firstName);
-
-    
-    
+  console.log(ob.firstName);
 }
-
-
-
-
-
-
-
