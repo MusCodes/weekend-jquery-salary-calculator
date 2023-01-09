@@ -56,7 +56,7 @@ function grabber(){
 // we created earlier as a argument and takes the input we enter inside the grabber function
 // and appends it as a table.
 function table (ob){
-    let id= $("#tableiD")
+    
     $("#tableiD").append(`<tr>
         <td>${ob.firstName}</td>
         <td>${ob.lastName}</td>
@@ -72,9 +72,7 @@ function table (ob){
     
     
 }
-function deleteButton(){
-    
-}
+
 
 
 

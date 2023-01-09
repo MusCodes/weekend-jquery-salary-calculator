@@ -46,6 +46,9 @@ h1{
 .font_big { 
 font-size: 72px;
 }
+body{
+    background-color: bisque;
+}
 
 
 
