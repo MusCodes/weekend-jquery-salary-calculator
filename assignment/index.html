@@ -13,12 +13,12 @@
     <h1> Salary Calculator</h1>
     <h2> Add employee</h2>
     <div class="placeholders">
-<input id="firstName" placeholder="First Name"/>
-<input id="lastName" placeholder="Last Name"/>
-<input id="Id" placeholder="ID"/>
-<input id="Title" placeholder="Title"/>
-<input id="Salary" placeholder="AnnualSalary"/>
-<button id="Submit">Submit</button>
+<input id="firstName" placeholder="First-Name"/>
+<input id="lastName" placeholder="Last-Name"/>
+<input id="id" placeholder="ID" type="number"/>
+<input id="title" placeholder="Title"/>
+<input id="salary" placeholder="AnnualSalary" type="number"/>
+<button id="submit">Submit</button>
 </div>
 <main>
     <br>
@@ -26,7 +26,7 @@
     <br>
     
 <h2>employee</h2>
-<table>
+<table id="tableiD">
     <tr>
         <th>First Name</th>
         <th>Last Name</th>
@@ -34,18 +34,20 @@
         <th>Title</th>
         <th>AnnualSalary</th>
         <th> &nbsp; </th>
+        
     </tr>
+    <section>
 
-    <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td> &nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-    </tr>
-
+   <!-- ] <tr>
+     -->
+        <!-- <td class="delete"> <button> Delete</button></td>
+    
+    </tr> -->
+    </section> 
+    
 </table>
 
+<h3 class="total ">Total Monthly: <span id="spaniD"></span></h3>
 
 
 
