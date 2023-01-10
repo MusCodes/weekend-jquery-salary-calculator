@@ -3,6 +3,7 @@ $(function () {
   //we set up our click function, were telling jquery to refrence our submit
   // id which is a submit button, and every time that is clicked, to run out function.
 
+
   $("#submit").on("click", function () {
     let grabberObject = grabber();
     console.log(grabberObject);
@@ -27,6 +28,10 @@ $(function () {
       $(this).closest("tr").remove();
     });
     $("#spaniD").text(formatter.format(sumTotal));
+    // i refrenced the placeholders which is a class I gave to the div
+    // element that holds the input values, used the find method to locate the
+    // inputs and set its value to an empty string. 
+    $(".placeholders").find("input").val("");
   });
 
   //table(grabber());
